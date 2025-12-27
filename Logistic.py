@@ -23,13 +23,17 @@ st.markdown("""
             </div>
             """,unsafe_allow_html=True)
 
-import os
 import pandas as pd
 
-BASE_DIR = os.path.dirname(__file__)
-file_path = os.path.join(BASE_DIR, "bank.csv")
+columns = [
+    'age','job','marital','education','default',
+    'balance','housing','loan','contact','day',
+    'month','duration','campaign','pdays','previous',
+    'poutcome','y'
+]
 
-df = pd.read_csv(file_path)
+df = pd.read_csv("bank.csv", header=None, names=columns)
+
 
 st.dataframe(df.head())
 
