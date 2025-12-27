@@ -48,7 +48,7 @@ y_pred=model.predict(x_test)
 
 #Metrics
 mae=mean_absolute_error(y_test,y_pred)
-rmse=np.sqrt(mae)
+rmse=np.sqrt(mean_squared_error(y_test,y_pred))  # ✅ Correct RMSE
 r2=r2_score(y_test,y_pred)
 adj_r2=1-(1-r2)*(len(y_test)-1)/(len(y_test)-2)
 
@@ -118,3 +118,4 @@ st.markdown(
 )
 
 st.markdown('</div>', unsafe_allow_html=True)
+
