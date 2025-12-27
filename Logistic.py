@@ -23,10 +23,13 @@ st.markdown("""
             </div>
             """,unsafe_allow_html=True)
 
-@st.cache_data
-def load_data():
-    return pd.read_csv(r"C:\Users\indun\OneDrive\Documents\bank\bank.csv",sep=';')
-df=load_data()
+import os
+import pandas as pd
+
+BASE_DIR = os.path.dirname(__file__)
+file_path = os.path.join(BASE_DIR, "bank.csv")
+
+df = pd.read_csv(file_path)
 
 st.dataframe(df.head())
 
