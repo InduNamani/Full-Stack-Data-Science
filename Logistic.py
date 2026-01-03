@@ -25,7 +25,7 @@ st.markdown("""
 
 @st.cache_data
 def load_data():
-    return pd.read_csv(r"C:\Users\indun\OneDrive\Documents\bank\bank.csv",sep=";")
+    return pd.read_csv("bank.csv", sep=";")
 df=load_data()
 
 st.dataframe(df.head())
@@ -65,6 +65,8 @@ y_pred=model.predict(X_test)
 accuracy=accuracy_score(y_test,y_pred)
 cm=confusion_matrix(y_test,y_pred)
 report=classification_report(y_test,y_pred)
+
+
 
 # ---------------- VISUALIZATION ----------------
 st.markdown('<div class="card">', unsafe_allow_html=True)
