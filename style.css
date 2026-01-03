@@ -1,49 +1,128 @@
-
-
-.stApp{
+/* Sunset Theme - Professional & Attractive */
+.stApp {
     background: linear-gradient(
         135deg,
-        #e69e96 0%,
-        hsl(13, 63%, 74%) 50%,
-        #e9a885 100%
+        #fa709a 0%,
+        #fee140 100%
     );
-    min-height:100vh;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.card{
-    background-color:#5d2642;
-    padding:25px;
-    border-radius:16px;
-    box-shadow:0 8px 20px rgba(0,0,0,0.08);
-    margin-bottom:25px;
+.card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    margin-bottom: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: transform 0.3s ease;
 }
 
-h1,h2,h3{
-    color:#0f172a;
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.2);
 }
 
-/* Metric box */
-div[data-testid="metric-container"]{
-    background-color:#6e124c;
-    border-radius:14px;
-    box-shadow:0 4px 10px rgba(0,0,0,0.05);
+h1 {
+    color: #2d3748;
+    font-weight: 700;
+    margin-bottom: 15px;
+    background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+h2, h3 {
+    color: #4a5568;
+    font-weight: 600;
+}
+
+p {
+    color: #718096;
+    line-height: 1.6;
+}
+
+/* Metric boxes */
+div[data-testid="metric-container"] {
+    background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(250, 112, 154, 0.3);
+    transition: transform 0.3s ease;
+}
+
+div[data-testid="metric-container"]:hover {
+    transform: scale(1.05);
+}
+
+div[data-testid="metric-container"] label {
+    color: rgba(255, 255, 255, 0.9) !important;
+    font-weight: 600;
+}
+
+div[data-testid="metric-container"] [data-testid="stMetricValue"] {
+    color: #ffffff !important;
+    font-weight: 700;
 }
 
 /* Prediction box */
-.prediction-box{
-    background: linear-gradient(
-        135deg,
-        #e2477d,
-        #bbf7d0
-    );
-    padding:22px;
-    border-radius:14px;
-    text-align:center;
-    font-size:22px;
-    font-weight:bold;
-    color:#14532d;
-    margin-top:15px;
+.prediction-box {
+    background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+    padding: 25px;
+    border-radius: 16px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-top: 20px;
+    box-shadow: 0 15px 40px rgba(250, 112, 154, 0.4);
+    animation: pulse 2s infinite;
 }
 
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.02);
+    }
+}
 
+/* Dataframe styling */
+div[data-testid="stDataFrame"] {
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Button styling */
+button[kind="primary"] {
+    background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 24px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+button[kind="primary"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(250, 112, 154, 0.4);
+}
+
+/* Input fields */
+input, select, textarea {
+    border-radius: 10px !important;
+    border: 2px solid #e2e8f0 !important;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: #fa709a !important;
+    box-shadow: 0 0 0 3px rgba(250, 112, 154, 0.1) !important;
+}
