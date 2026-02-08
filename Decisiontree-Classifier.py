@@ -22,7 +22,7 @@ df["Target"] = y
 df["Flower Name"] = df["Target"].apply(lambda x: target_names[x])
 
 # Sidebar controls
-st.sidebar.header("⚙️ Model Settings")
+st.sidebar.header(" Model Settings")
 max_depth = st.sidebar.slider("Max Depth", 1, 10, 3)
 
 # Train-test split
