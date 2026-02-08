@@ -10,7 +10,7 @@ from sklearn.metrics import accuracy_score
 st.set_page_config(page_title="Naive Bayes Iris Classifier", layout="centered")
 
 st.title("Naive Bayes (Gaussian & Bernoulli) using Iris Dataset")
-st.write("🌸 Iris Flower Classification")
+st.write(" Iris Flower Classification")
 
 # Load dataset
 iris = load_iris()
@@ -31,7 +31,7 @@ bnb = BernoulliNB()
 bnb.fit(x_train, y_train)
 
 # Sidebar inputs
-st.sidebar.header("🌱 Input Flower Features")
+st.sidebar.header(" Input Flower Features")
 
 sepal_length = st.sidebar.slider(
     "Sepal Length (cm)", float(X[:,0].min()), float(X[:,0].max()), float(X[:,0].mean())
